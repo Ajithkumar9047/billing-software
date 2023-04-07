@@ -465,7 +465,7 @@ class Bill_App:
         if op > 0:
             self.root.destroy()
     def print_bill(self):
-        os.startfile("C:\\cakeshop\\cakeshop" + str(self.bill.get()) + ".txt", "print")
+        os.startfile(f"C:\\cakeshop\\{self.Date}"+"-" + str(self.bill.get()) + ".txt", "print")
 
 obj = Bill_App(root)
 root.configure(bg="#87CEEB")
