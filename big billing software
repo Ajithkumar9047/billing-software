@@ -3,6 +3,7 @@ from tkinter import *
 import  random
 from tkinter import messagebox
 import datetime as dt
+from tkinter import filedialog
 date = dt.datetime.now()
 d=f'{date:%A, %B %d, %Y}'
 root = Tk()
@@ -397,7 +398,11 @@ class Bill_App:
         op = messagebox.askyesno("Save Bill", "Do you want to save the Bill?")
         if op > 0:
             self.bill_data = self.txtarea.get('1.0', END)
-            f1 = open(f"C:\\cakeshop\\{self.Date}"+"-" + str(self.bill.get()) + ".txt", "w")
+            self.file_path = filedialog.askdirectory()
+
+            self.new_file = (f"cakeshop{self.Date}+'-'+{str(self.bill.get())}")
+            f1= open(f"{self.file_path}\%s.py" % self.new_file +".txt", 'w')
+
             f1.write(self.bill_data)
             f1.close()
             messagebox.showinfo("Saved", f"Bill No :{self.bill.get()} Saved Succeddfully")
@@ -465,7 +470,7 @@ class Bill_App:
         if op > 0:
             self.root.destroy()
     def print_bill(self):
-        os.startfile(f"C:\\cakeshop\\{self.Date}"+"-" + str(self.bill.get()) + ".txt", "print")
+        os.startfile(f"{self.file_path}\%s.py" % self.new_file +".txt", "print")
 
 obj = Bill_App(root)
 root.configure(bg="#87CEEB")
