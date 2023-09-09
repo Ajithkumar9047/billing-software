@@ -17,21 +17,26 @@ Before you run this application, make sure you have Python installed on your com
 ## Usage
 
 1. Clone this repository to your local machine.
+2. 
    git clone <repository_url>
    
 2.Navigate to the project directory.
+
 cd billing-application
 
 3.Run the application.
+
 python billing_app.py
 Follow the on-screen instructions to create a bill.
 
 4.Screenshots
 
-##License
+## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-##Acknowledgments
+## Acknowledgments
+
 Thanks to the Tkinter library for providing a simple way to create graphical user interfaces in Python.
 Feel free to contribute or report any issues you encounter while using this application. Enjoy billing!
 
